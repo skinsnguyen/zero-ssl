@@ -3,7 +3,7 @@
 ## Last Updated : 19/06/2023
 ## Company : AZDIG
 pwdd=`pwd`
-homeuser=$(echo $pwd)
+homeuser=$(echo ${pwdd})
 cat << "EOF"
  _   _                                          _   _
 | \ | | __ _ _   _ _   _  ___ _ __             | \ | | __ _ _ __ ___
@@ -13,7 +13,6 @@ cat << "EOF"
        |___/       |___/
 
 EOF
-homeuser=$(echo $PWD)
 
 echo "! Kich Hoat SSL  !"
 read -p "Nhap domain  :" domainssl
