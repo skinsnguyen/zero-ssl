@@ -15,7 +15,7 @@ EOF
 
 
 echo "! Kich Hoat SSL  !"
-read -p "Nhap domain  : " domainssl
+read -p "Nhap domain  :" domainssl
 read -p "Nhap path  : " pathssl
 wget -O -  https://get.acme.sh | sh -s email={domainssl}   
 source ~/.bashrc
