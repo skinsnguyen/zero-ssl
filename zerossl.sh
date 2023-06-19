@@ -15,11 +15,11 @@ EOF
 
 
 echo "! Kich Hoat SSL  !"
-read -p "Nhap domain  : " domain-ssl
-read -p "Nhap path  : " path-ssl
-wget -O -  https://get.acme.sh | sh -s email={domain-ssl}   
+read -p "Nhap domain  : " domainssl
+read -p "Nhap path  : " pathssl
+wget -O -  https://get.acme.sh | sh -s email={domainssl}   
 source ~/.bashrc
 
-acme.sh --issue --webroot ~/{path-ssl} -d {domain-ssl} -d www.{domain-ssl} --force
-acme.sh --deploy --deploy-hook cpanel_uapi --domain {domain-ssl} --domain www.{domain-ssl}  
+acme.sh --issue --webroot ~/${pathssl} -d ${domainssl} -d www.${domainssl} --force
+acme.sh --deploy --deploy-hook cpanel_uapi --domain ${domainssl} --domain www.${domainssl}  
 rm -f ${pwdd}/zerossl.sh
